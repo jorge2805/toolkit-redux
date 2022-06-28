@@ -8,16 +8,13 @@ export const pokemonSlice = createSlice({
       isLoading: false,
   },
   reducers: {
-    increment: (state) => {
-        state.counter += 1
+    startLoadingPokemons: (state) => {
+        state.isLoading = true;
     },
-    decrement: (state) => {
-        state.counter -= 1
-    },
-    incrementByAmount: (state, action) => {
-        state.counter += action.payload
-    },
+    setPokemons: (state,action) => {
+        console.log(action)
+    }
   },
 })
 
-export const { increment, decrement, incrementByAmount } = pokemonSlice.actions
+export const { startLoadingPokemons, setPokemons } = pokemonSlice.actions
